@@ -1,0 +1,14 @@
+{
+  "name": "zocom-slides-theme",
+  "version": "1.0.0",
+  "description": "Theme for ZoCom Reveal.js slides.",
+  "main": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "Johan Kivi",
+  "license": "ISC",
+  "dependencies": {
+    "mermaid": "^8.6.4",
+    "reveal-md": "^4.1.2"
+  }
+}

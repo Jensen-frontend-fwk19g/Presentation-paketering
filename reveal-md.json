@@ -1,0 +1,6 @@
+{
+    "theme" : "https://theme.zocom.io/latest",
+    "highlightTheme" : "monokai",
+    "pdfSeparateFragments": false,
+    "transition" : "slide"
+}
