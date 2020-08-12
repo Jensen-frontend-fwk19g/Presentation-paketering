@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Theme for ZoCom Reveal.js slides.",
   "main": "",
-  "scripts": {},
+  "scripts": {
+      "start": "npx reveal-md presentations/01-tdd.md -w"
+  },
   "keywords": [],
   "author": "Johan Kivi",
   "license": "ISC",

@@ -1,8 +1,11 @@
 # ZoCom Presentation Boilerplate
 
-Just run the following command ( requires node.js installed ) and you are good to go.
+Run the following commands to start.
 
 ```bash
 npm install
+
+npx reveal-md <presentation-file> -w
 ```
 
+Press "S" in the browser to open speaker view.
