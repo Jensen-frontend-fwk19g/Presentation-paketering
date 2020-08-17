@@ -12,25 +12,25 @@ Note: tryck S för att öppna speaker view
 
 * Vad är TDD?
 * Varför ska man skriva tester?
-* Introduktion till enhetstester i Vue
 * Konfigurera och köra tester
 
 
 ---
+![Varför testdriven utveckling behövs](img/need-of-test-driven-development.jpg)
 
 
+---
+## Linux kernel size
+Storleken på källkoden för operativsystemet Linux, från 1995 till 2019
+![Linux kernel size](img/kernel-size.png)
+
+---
 *Velocity* är hur snabbt teamet kan lägga till ny funktionalitet.
 
 Ju längre man kommer i ett projekt, desto mer komplicerat blir det. Man lägger mer och mer tid på att fixa buggar. Det blir svårare att lägga till ny funktionalitet, för att koden är så rörig.
 
 Detta vill TDD ändra på.
 
-![Varför testdriven utveckling behövs](img/need-of-test-driven-development.jpg)
-
----
-## Linux kernel size
-Storleken på källkoden för operativsystemet Linux, från 1995 till 2019
-![Linux kernel size](img/kernel-size.png)
 
 ---
 
@@ -40,7 +40,7 @@ TDD == Test-Driven Development (testdriven utveckling)
 
 TDD kommer från eXtreme Programming, 1999. Det går ut på att skriva funktioner som testar koden innan man skrivit den.
 
-I stället för att manuellt testa att ett program fungerar korrekt skriver man testfall - *test cases*. Moderna ramverk låter oss köra alla testfall automatiskt.
+I stället för att manuellt testa att ett program fungerar korrekt skriver man testfall (*test cases*). Moderna testramverk kör alla testfall automatiskt.
 
 **"Red, green refactor"** är en minnesregel som sammanfattar hur man skriver enhetstest enligt TDD.
 + Red - skriv ett test som failar, ett "rött" test
@@ -59,7 +59,49 @@ I stället för att manuellt testa att ett program fungerar korrekt skriver man 
 4. Allra sist skriver man **implementationen**, så att testfallet kan bli grönt.
 ---
 
-## Case study: boka tvättid (1/2)
+## Case study: ränta (1/3)
+
+Vi ska skriva en funktion som räknar ut ränta, som ska användas på en bank. <br>Ett utkast till specifikation:
+1. funktionen ska anropas med två parametrar, räntesats och antal år
+2. räntesats ska vara ett tal `1 <= x < 2`
+3. antal år ska vara ett positivt heltal
+4. om antal år är `0` ska talet `1` returneras
+---
+
+## Case study: ränta (2/3)
+
+Testfall:
+
++ it should throw an error if `interest` has a bad value
++ it should throw an error if `years` has a bad value
++ it should throw an error if wrong number of parameters
++ it should return `1` if `years == 0`
++ it should return correct interest rate otherwise
+
+---
+
+## Case study: ränta (3/3)
+
+Börja med *ett* testfall!
+
+#### 4: it should return `1` if `years == 0`
+
+```javascript[1-2|4|6]
+let years = 0, rate = 1.075;
+let expected = 1;
+
+let actual = calculateInterest(years, rate);
+
+if( expected !== actual ) throw new Error('Test #4 failed')
+```
+
+Nu får du skriva *minsta möjliga kod* som gör att testfallet uppfylls.
+
+Note: Arrange, Act, Assert
+
+---
+
+## Case study: boka tvättid (1/3)
 
 Vi vill bygga en app som vi kan använda för att boka tvättid.
 Ett utkast till specifikation:
@@ -74,7 +116,7 @@ Har vi fått med allt?
 
 ---
 
-## Case study: boka tvättid (2/2)
+## Case study: boka tvättid (2/3)
 
 Testfall:
 + it should log in user with correct apartment number
@@ -87,38 +129,46 @@ Testfall:
 + osv...
 
 ---
-## Exempel, pseudo-kod
-```js[1-4|6|7|8-9|10-11]
+## Case study: boka tvättid (3/3)
+```js[1-4|6-7|9|11-14]
 function bookTimeSlot(startTime) {
     // implementation goes here
     // let's assume it should return TRUE if booking is successful
 }
 
 let badStartTime = '10:00';   // only 9, 13, 17 allowed
-let result = bookTimeSlot(badStartTime);
-if( result )
+let expected = false;  // we expect booking to fail
+
+let actual = bookTimeSlot(badStartTime);
+
+if( actual !== expected )
     console.log('test FAILED (booked bad start time)');
 else
     console.log('test SUCCESSFUL (did not allow bad booking)');
 ```
 ---
-## Vue, exempel komponent
+## Jest
+Ett testramverk som hjälper oss skriva tester. Exempel:
+```javascript
+// importera koden som ska testas
+const exampleFunction = require('example.js');
 
-```js[1-11|2-7|4,9|5,10]
-export default {
-    data() {
-        return {
-            value: 1,
-            message: 'Hello'
-        }
-    },
-    methods: {
-        increase() { this.value += 1; },
-        setMessage(msg) { this.message = msg; }
-    }
-}
+// utgå från user stories i kravspec
+it('should return true for correct input', () => {
+    // arrange - förbered testet
+    let expected = true;
+
+    // act - anropa funktioner
+    let actual = exampleFunction();
+
+    // assert - kontrollera resultatet
+    expect(actual).toBe(expected);
+})
 ```
+https://jestjs.io/docs/en/getting-started.html
 
 ---
+<!-- .slide: class="code" -->
 
-## Testning i Vue
+## Lets code!
+Vi arbetar med övningarna, stycke 1.

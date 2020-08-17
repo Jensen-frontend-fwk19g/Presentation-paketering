@@ -16,3 +16,18 @@ npx reveal-md presentations/<presentation-file>
 Presenters:
 * add `-w` to enable "watch mode"
 * press "S" in the browser if you want speaker view
+
+---
+
+## Presentation classes
+#### Backgrounds
++ Colors: `red, yellow, green, blue, pink, purple, lightgrey, darkgrey`
++ `intro`
++ `basic`
++ `complex`
++ `code`
++ `task`
++ `discussion`
+
+#### Other
+Use `<!-- .element: class="fragment" -->` to make elements appear after a click.
