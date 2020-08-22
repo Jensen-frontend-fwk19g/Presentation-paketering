@@ -16,6 +16,7 @@ npx reveal-md presentations/<presentation-file>
 Presenters:
 * add `-w` to enable "watch mode"
 * press "S" in the browser if you want speaker view
+* press "O" or "Esc" for overview mode
 
 ---
 
