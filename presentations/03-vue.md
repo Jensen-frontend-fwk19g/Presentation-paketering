@@ -13,6 +13,7 @@ Note: tryck S för att öppna speaker view
 
 * https://vue-test-utils.vuejs.org/guides
 
+
 ---
 ## Sammanfattning
 <ul>
@@ -22,8 +23,8 @@ Note: tryck S för att öppna speaker view
 	<li>Händer rätt saker när anv. interagerar med komponenten?
 </ul>
 
-
 Note: Vue Testing Library rekommenderas i stället för Vue Test Utils, men den förra innehåller en bug i senaste versionen (2020-08) och kan inte användas med events.
+
 
 ---
 <!-- .slide: class="basic blue" -->
@@ -35,6 +36,7 @@ const wrapper = shallowMount(MyComponent);
 ```
 
 För att testa komponenten fristående från alla andra komponenter.
+
 
 ---
 <!-- .slide: class="basic blue" -->
@@ -55,6 +57,7 @@ let span = wrapper.find('div .message');
 // text() returns the text contents for any wrapper object
 let message = span.text();
 ```
+
 
 ---
 <!-- .slide: class="basic blue" -->
@@ -78,6 +81,8 @@ await resetButton.trigger('click');
 // vm works with methods and computed properties too
 let timer = wrapper.vm.timer;
 ```
+Note: vm är read only
+
 
 ---
 <!-- .slide: class="basic blue" -->
@@ -98,6 +103,7 @@ let textBefore = wrapper.find('.display').text();
 wrapper.setData({ message: 'changed' });
 let textAfter = wrapper.find('.display').text();
 ```
+
 
 ---
 <!-- .slide: class="basic pink" -->
@@ -121,6 +127,7 @@ export default {
 }
 ```
 Note: repetition av Vue
+
 
 ---
 <!-- .slide: class="basic pink" -->
@@ -146,6 +153,7 @@ export default {
 </template>
 ```
 
+
 ---
 <!-- .slide: class="basic blue" -->
 ## Är ett element synligt?
@@ -159,6 +167,7 @@ Om villkoret är false, tar bort elementet ur DOM. <br>Kontrollera att `wrapper.
 let element = wrapper.find('div');
 expect(element.exists()).toBe(false);
 ```
+
 
 ---
 <!-- .slide: class="basic blue" -->
@@ -174,6 +183,8 @@ let element = wrapper.find('div');
 let isVisible = element.style.display !== 'none';
 expect(isVisible).toBe(false);
 ```
+
+
 ---
 <!-- .slide: class="basic blue" -->
 ## Skicka information med events
