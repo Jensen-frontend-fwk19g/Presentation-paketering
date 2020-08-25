@@ -9,11 +9,10 @@ Note: tryck S för att öppna speaker view
 <!-- .slide: class="complex pink" -->
 ## Idag
 
-* Mocking
-* AJAX
-* Deep render
-
-* https://vue-test-utils.vuejs.org/guides
+* describe
+* fejka props &amp; data
+* stubs
+* Mocking - AJAX
 
 
 ---
