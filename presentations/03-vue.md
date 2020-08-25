@@ -179,7 +179,7 @@ Om villkoret är false, sätter `display: none`<br>Kontrollera elementets `displ
 <div v-show="false"> Jag är osynlig </div>
 ```
 ```javascript
-let element = wrapper.find('div');
+let element = wrapper.find('div').element;
 let isVisible = element.style.display !== 'none';
 expect(isVisible).toBe(false);
 ```
