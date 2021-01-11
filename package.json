@@ -4,7 +4,7 @@
   "description": "Theme for ZoCom Reveal.js slides.",
   "main": "",
   "scripts": {
-      "start": "npx reveal-md presentations/01-tdd.md -w"
+    "start": "reveal-md presentations/01-tdd.md -w"
   },
   "keywords": [],
   "author": "Johan Kivi",

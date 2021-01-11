@@ -1,0 +1,619 @@
+/*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+ *                                           *
+ *           ZoCom Reveal.js Theme           *
+ *               version 1.1	             *
+ *                                           * 
+ *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*/
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+.reveal-viewport {
+  background: #EEEEEE;
+  background-color: #EEEEEE;
+}
+
+.reveal {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #141414;
+}
+
+.reveal ::-moz-selection {
+  color: #EEEEEE;
+  background: #FED253;
+  text-shadow: none;
+}
+
+.reveal ::selection {
+  color: #EEEEEE;
+  background: #FED253;
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: #EEEEEE;
+  background: #FED253;
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.4;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 2rem 0;
+  color: #141414;
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: normal;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: 3.29em;
+  font-weight: 700;
+}
+
+.reveal h2 {
+  font-size: 2.47em;
+}
+
+.reveal h3 {
+  font-size: 1.86em;
+}
+
+.reveal h4 {
+  font-size: 1.4em;
+}
+
+.reveal h1 {
+  text-shadow: none;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 1rem 0;
+  line-height: 1.3;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 85%;
+  max-height: 85%;
+  border: none;
+}
+
+.reveal img {
+  max-height: 50vh;
+  border-radius: .2rem;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal li {
+  margin: .5rem 0;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 3rem;
+  font-style: italic;
+  position: relative;
+}
+
+.reveal blockquote p {
+  padding: 0 2rem;
+}
+
+.reveal blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+  position: absolute;
+  left: 1rem;
+  top: .2rem;
+}
+
+.reveal blockquote::after {
+  font-family: Arial;
+  content: "\201D";
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+  position: absolute;
+  right: 2.5rem;
+  bottom: -2.4rem;
+}
+
+.reveal blockquote span {
+  display: block;
+  padding: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+  opacity: .8;
+  font-size: 2rem;
+}
+
+.reveal blockquote span::before {
+  display: inline-block;
+  content: "";
+  border-top: .14rem solid black;
+  width: 3rem;
+  margin: 0 1rem;
+  -webkit-transform: translateY(-0.6rem);
+          transform: translateY(-0.6rem);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 1rem auto;
+  text-align: left;
+  font-size: 1em;
+  font-family: monospace;
+  line-height: 1.3em;
+  border-radius: .25rem;
+  word-wrap: break-word;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: monospace;
+  text-transform: none;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 1rem;
+  border-radius: .25rem;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+.reveal img {
+  margin: 1rem 0;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #431261;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+.reveal a:hover {
+  color: #7e22b7;
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #160620;
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid #141414;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: #431261;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: white;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #431261;
+}
+
+/*********************************************
+ * ZOCOM SLIDE BACKGROUND TEMPLATES
+ *********************************************/
+.reveal .backgrounds .red {
+  background-color: #FE2C2C;
+}
+
+.reveal .backgrounds .yellow {
+  background-color: #FED253;
+}
+
+.reveal .backgrounds .green {
+  background-color: #4AB396;
+}
+
+.reveal .backgrounds .blue {
+  background-color: #048ED9;
+}
+
+.reveal .backgrounds .pink {
+  background-color: #FBB3B2;
+}
+
+.reveal .backgrounds .purple {
+  background-color: #431261;
+}
+
+.reveal .backgrounds .lightgrey {
+  background-color: #EEEEEE;
+}
+
+.reveal .backgrounds .darkgrey {
+  background-color: #141414;
+}
+
+.reveal .backgrounds .intro {
+  background-color: #FE2C2C;
+  background-image: url("/assets/bg-o-br.svg"), url("/assets/logo-white.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, 10rem;
+  background-position: right bottom, center 92%;
+}
+
+.reveal .backgrounds .basic {
+  background-image: url("/assets/bg-o-bl-white.svg"), url("/assets/bg-o-white.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, 80% 30%;
+  background-size: 40%, 20%;
+}
+
+.reveal .backgrounds .complex {
+  background-image: url("/assets/bg-o-br.svg"), url("/assets/bg-dots-white.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, 5rem 5rem;
+}
+
+.reveal .backgrounds .code {
+  background-color: #431261;
+  background-image: url("/assets/code.png"), url("/assets/bg-o-big-bl.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, bottom left;
+  background-size: 40%, auto;
+}
+
+.reveal .backgrounds .task {
+  background-color: #FED253;
+  background-image: url("/assets/panic.png"), url("/assets/bg-o-big-bl.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 80% bottom, bottom left;
+  background-size: 32%, auto;
+}
+
+.reveal .backgrounds .discussion {
+  background-color: #4AB396;
+  background-image: url("/assets/bears.png"), url("/assets/bg-o-big-bl.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, bottom left;
+  background-size: 42%, 60% auto;
+}
+
+/*********************************************
+ * ZoCom SLIDE TEMPLATES COLOR TWEEKS
+ *********************************************/
+.reveal .red h1, .reveal .red h2, .reveal .red h3, .reveal .red h4, .reveal .red p, .reveal .red li,
+.reveal .green h1,
+.reveal .green h2,
+.reveal .green h3,
+.reveal .green h4,
+.reveal .green p,
+.reveal .green li,
+.reveal .blue h1,
+.reveal .blue h2,
+.reveal .blue h3,
+.reveal .blue h4,
+.reveal .blue p,
+.reveal .blue li,
+.reveal .purple h1,
+.reveal .purple h2,
+.reveal .purple h3,
+.reveal .purple h4,
+.reveal .purple p,
+.reveal .purple li,
+.reveal .darkgrey h1,
+.reveal .darkgrey h2,
+.reveal .darkgrey h3,
+.reveal .darkgrey h4,
+.reveal .darkgrey p,
+.reveal .darkgrey li,
+.reveal .intro h1,
+.reveal .intro h2,
+.reveal .intro h3,
+.reveal .intro h4,
+.reveal .intro p,
+.reveal .intro li,
+.reveal .code h1,
+.reveal .code h2,
+.reveal .code h3,
+.reveal .code h4,
+.reveal .code p,
+.reveal .code li,
+.reveal .discussion h1,
+.reveal .discussion h2,
+.reveal .discussion h3,
+.reveal .discussion h4,
+.reveal .discussion p,
+.reveal .discussion li {
+  color: white;
+}
+
+.reveal .red blockquote span::before,
+.reveal .green blockquote span::before,
+.reveal .blue blockquote span::before,
+.reveal .purple blockquote span::before,
+.reveal .darkgrey blockquote span::before,
+.reveal .intro blockquote span::before,
+.reveal .code blockquote span::before,
+.reveal .discussion blockquote span::before {
+  border-top: .14rem solid white;
+}
+
+.reveal .red blockquote::before,
+.reveal .green blockquote::before,
+.reveal .blue blockquote::before,
+.reveal .purple blockquote::before,
+.reveal .darkgrey blockquote::before,
+.reveal .intro blockquote::before,
+.reveal .code blockquote::before,
+.reveal .discussion blockquote::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.reveal .red blockquote::after,
+.reveal .green blockquote::after,
+.reveal .blue blockquote::after,
+.reveal .purple blockquote::after,
+.reveal .darkgrey blockquote::after,
+.reveal .intro blockquote::after,
+.reveal .code blockquote::after,
+.reveal .discussion blockquote::after {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*********************************************
+ * ZOCOM SLIDE TEMPLATES LAYOUT TWEEKS
+ *********************************************/
+.reveal .code h1, .reveal .code h2, .reveal .code h3, .reveal .code h4, .reveal .code p, .reveal .code li,
+.reveal .task h1,
+.reveal .task h2,
+.reveal .task h3,
+.reveal .task h4,
+.reveal .task p,
+.reveal .task li {
+  max-width: 50%;
+  text-align: left;
+}
+
+.reveal .discussion h1, .reveal .discussion h2, .reveal .discussion h3, .reveal .discussion h4, .reveal .discussion p, .reveal .discussion li {
+  max-width: 50%;
+  text-align: left;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.reveal .intro h1 {
+  margin: 4rem 0 1rem 0;
+}
+
+.reveal .intro h2 {
+  margin: 2rem 0;
+}
+
+.reveal .intro h6 {
+  font-size: 1.6rem;
+  margin-top: 6rem;
+}
+
+.reveal .intro h6 > a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #EEEEEE;
+    color: #141414;
+  }
+  .slides .intro {
+    background-color: #FE2C2C;
+  }
+  .slides .code {
+    background-color: #431261;
+  }
+  .slides .task {
+    background-color: #FED253;
+  }
+  .slides .discussion {
+    background-color: #4AB396;
+  }
+  .slides .plain .red, .slides .basic .red, .slides .complex .red {
+    background-color: #FE2C2C;
+  }
+  .slides .plain .yellow, .slides .basic .yellow, .slides .complex .yellow {
+    background-color: #FED253;
+  }
+  .slides .plain .green, .slides .basic .green, .slides .complex .green {
+    background-color: #4AB396;
+  }
+  .slides .plain .blue, .slides .basic .blue, .slides .complex .blue {
+    background-color: #048ED9;
+  }
+  .slides .plain .pink, .slides .basic .pink, .slides .complex .pink {
+    background-color: #FBB3B2;
+  }
+  .slides .plain .purple, .slides .basic .purple, .slides .complex .purple {
+    background-color: #431261;
+  }
+  .slides .plain .lightgrey, .slides .basic .lightgrey, .slides .complex .lightgrey {
+    background-color: #EEEEEE;
+  }
+  .slides .plain .darkgrey, .slides .basic .darkgrey, .slides .complex .darkgrey {
+    background-color: #141414;
+  }
+}
+/*# sourceMappingURL=zocom.css.map */

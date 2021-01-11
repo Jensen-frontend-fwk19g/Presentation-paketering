@@ -1,5 +1,5 @@
 {
-    "theme" : "https://theme.zocom.io/latest",
+    "theme" : "./zocom.css",
     "highlightTheme" : "monokai",
     "pdfSeparateFragments": false,
     "transition" : "slide"

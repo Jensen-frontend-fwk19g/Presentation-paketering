@@ -10,10 +10,27 @@ Note: tryck S för att öppna speaker view
 
 ## Idag
 
+* reveal-md och helper.zocom.io
 * Vad är TDD?
 * Varför ska man skriva tester?
 * Konfigurera och köra tester
 
+
+---
+<!-- .slide: class="basic blue" -->
+### Vad är reveal-md?
+
+Ett npm-paket för att skapa presentationer. Se <code>README.md</code> för dokumentation.
+
+Tryck "o" för att se flera slides på samma gång.
+
+### Vad är Helper?
+
+Ett verktyg som ZoCom utvecklar för att underlätta distansundervisning. Skriv ditt namn och vilket rum du ska ansluta till. Välj sedan färg för att tala om hur det går för dig.
+
+* **grön** - klar, läget under kontroll
+* **gul** - jobbar på, men behöver ingen hjälp just nu
+* **röd** - sitter fast, behöver hjälp just nu
 
 ---
 ![Varför testdriven utveckling behövs](img/need-of-test-driven-development.jpg)
