@@ -195,7 +195,7 @@ Note: lägg till --no-cache om parcel "kommer ihåg" felaktiga värden mellan k�
 
 **Enklare lösning:** Vue CLI har inbyggt stöd för både Jest och Babel!
 
-Vi tittar närmare på: <br> https://github.com/Jensen-frontend-19/03-vue-exercises
+Vi tittar på package.json i ett Vue-projekt: <br> https://github.com/Jensen-frontend-19/03-vue-exercises
 
 
 ---
